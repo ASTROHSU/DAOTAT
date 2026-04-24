@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>加密貨幣入門與動手實作・臺灣數位資產暨開放科技協會｜區塊勢</title>
+<title>臺灣數位資產暨開放科技協會 (DAOTAT)｜首頁</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
@@ -20,7 +20,6 @@
     --card: #FFFFFF;
     --line: #E3E8F0;
     --dark: #0E1A2B;
-    --gold: #C06A3A;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,882 +30,236 @@
     color: var(--text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.55;
-  }
-
-  .poster {
-    max-width: 960px;
-    margin: 32px auto;
-    background: #FFFFFF;
-    box-shadow: 0 20px 60px rgba(10, 37, 64, 0.15);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  /* ============ Header ============ */
-  .header {
-    padding: 56px 64px 40px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .header-top {
+    line-height: 1.6;
     display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 28px;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
-  .logo {
-    height: 64px;
-    width: auto;
-    flex-shrink: 0;
-  }
-
-  .header-title-wrap {
+  .container {
     flex: 1;
-    text-align: center;
-    padding-top: 4px;
-  }
-
-  .header-title {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 900;
-    font-size: 48px;
-    letter-spacing: 3px;
-    color: var(--navy);
-    line-height: 1.15;
-    margin-bottom: 14px;
-  }
-
-  .header-subtitle {
-    font-family: "Noto Sans TC", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 4px;
-    color: var(--blue);
-  }
-
-  .header-divider {
-    height: 1px;
-    background: var(--line);
-    margin: 28px 0 20px;
-  }
-
-  .header-tagline {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--text);
-    letter-spacing: 2px;
-  }
-
-  .header-tagline strong {
-    font-weight: 900;
-    color: var(--blue);
-  }
-
-  /* Decorative cubes (top-right) */
-  .cube-deco {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 180px;
-    height: 180px;
-    pointer-events: none;
-  }
-
-  .cube-deco::before {
-    content: "";
-    position: absolute;
-    top: 24px;
-    right: 40px;
-    width: 90px;
-    height: 90px;
-    background: var(--navy);
-    transform: skewY(-10deg);
-    border-radius: 2px;
-  }
-
-  .cube-deco::after {
-    content: "";
-    position: absolute;
-    top: 80px;
-    right: 24px;
-    width: 70px;
-    height: 70px;
-    background: var(--blue);
-    transform: skewY(-10deg);
-    border-radius: 2px;
-  }
-
-  .dots-deco {
-    position: absolute;
-    top: 100px;
-    right: 150px;
-    width: 60px;
-    height: 60px;
-    background-image: radial-gradient(var(--blue-border) 1.5px, transparent 1.5px);
-    background-size: 10px 10px;
-    opacity: 0.8;
-  }
-
-  /* ============ Section headings ============ */
-  .section {
-    padding: 0 64px;
-  }
-
-  .section-heading {
+    max-width: 1000px;
+    margin: 48px auto;
+    width: 100%;
+    padding: 0 24px;
     display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--navy);
-    letter-spacing: 2px;
-    margin: 36px 0 24px;
+    flex-direction: column;
   }
 
-  .section-heading .icon-badge {
-    width: 28px;
-    height: 28px;
-    background: var(--blue);
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 16px;
-  }
-
-  /* ============ Features (4 columns) ============ */
-  .features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    padding: 12px 0 32px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .feature {
+  .header {
     text-align: center;
-    padding: 16px 20px;
+    margin-bottom: 56px;
     position: relative;
   }
 
-  .feature:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 20px;
-    bottom: 20px;
-    width: 1px;
-    background: var(--line);
-  }
-
-  .feature-icon {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 16px;
-    color: var(--navy);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .feature-icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .feature-title {
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--navy);
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-  }
-
-  .feature-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
-  /* ============ Part heading ============ */
-  .part-heading {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    margin: 28px 0 16px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--blue);
-  }
-
-  .part-label {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 900;
-    font-size: 22px;
-    color: var(--blue);
-    letter-spacing: 2px;
-  }
-
-  .part-title {
-    font-size: 20px;
-    font-weight: 900;
-    color: var(--navy);
-    letter-spacing: 1.5px;
-  }
-
-  .part-tagline {
-    margin-left: auto;
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  /* ============ Module rows ============ */
-  .modules {
-    padding-bottom: 8px;
-  }
-
-  .module-row {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 16px;
-    margin-bottom: 14px;
-    align-items: stretch;
-  }
-
-  .module-number {
-    background: var(--blue);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Noto Serif TC", serif;
-    font-weight: 900;
-    font-size: 32px;
-    letter-spacing: 1px;
-    border-radius: 3px;
-  }
-
-  .module-body {
-    display: grid;
-    grid-template-columns: 56px 1.2fr 1fr;
-    background: var(--card);
-    border: 1px solid var(--blue-border);
-    border-radius: 3px;
-    padding: 18px 20px;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .module-icon {
-    width: 48px;
-    height: 48px;
-    color: var(--navy);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .module-icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .module-text h3 {
-    font-size: 20px;
-    font-weight: 900;
-    color: var(--navy);
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-  }
-
-  .module-text .module-sub {
+  .eyebrow {
     font-size: 14px;
     font-weight: 700;
     color: var(--blue);
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
   }
 
-  .module-text .module-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
-  .module-hands {
-    padding-left: 16px;
-    border-left: 1px solid var(--line);
-  }
-
-  .module-hands-label {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--blue);
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
-  }
-
-  .module-hands-list {
-    font-size: 13px;
-    color: var(--text);
-    line-height: 1.7;
-  }
-
-  /* ============ Course Format ============ */
-  .format {
-    padding: 8px 0 40px;
-  }
-
-  .format-flow {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-    gap: 8px;
-    align-items: stretch;
-  }
-
-  .format-step {
-    background: #F3F6FB;
-    border-radius: 3px;
-    padding: 18px 14px;
-    text-align: center;
-  }
-
-  .format-step .format-icon {
-    width: 32px;
-    height: 32px;
-    margin: 0 auto 10px;
-    color: var(--navy);
-  }
-
-  .format-step .format-icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .format-step h4 {
-    font-size: 15px;
+  .main-title {
+    font-family: "Noto Serif TC", serif;
     font-weight: 900;
+    font-size: 44px;
     color: var(--navy);
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    margin-bottom: 16px;
   }
 
-  .format-step p {
-    font-size: 12px;
+  .subtitle {
+    font-size: 18px;
     color: var(--text-muted);
-    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  .format-arrow {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 6px;
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid transparent;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 56px rgba(10, 37, 64, 0.12);
+    border-color: var(--blue-border);
+  }
+
+  .card-img-wrap {
+    height: 180px;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--blue);
-    font-size: 20px;
-    font-weight: 900;
   }
 
-  /* ============ Promise banner ============ */
-  .promise {
-    margin: 8px 0 8px;
-    background: var(--blue-soft);
-    border-left: 4px solid var(--blue);
-    padding: 20px 24px;
-    border-radius: 2px;
+  /* Different background gradients/patterns for cards */
+  .card-img-wrap.course-img {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3c61 100%);
+  }
+  .card-img-wrap.speaker-img {
+    background: linear-gradient(135deg, var(--blue) 0%, #004fb5 100%);
   }
 
-  .promise-label {
+  .card-icon {
+    width: 64px;
+    height: 64px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .card-content {
+    padding: 32px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-tag {
     font-size: 12px;
     font-weight: 700;
     color: var(--blue);
-    letter-spacing: 3px;
-    margin-bottom: 6px;
+    background: var(--blue-soft);
+    padding: 4px 12px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
   }
 
-  .promise-text {
+  .card-title {
     font-family: "Noto Serif TC", serif;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 900;
     color: var(--navy);
-    letter-spacing: 1px;
-    line-height: 1.5;
+    margin-bottom: 12px;
+    line-height: 1.4;
   }
 
-  /* ============ Footer ============ */
-  .footer {
-    background: var(--dark);
-    color: #fff;
-    padding: 28px 64px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+  .card-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    flex: 1;
   }
 
-  .footer-item {
+  .card-action {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .footer-icon {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    color: #fff;
-    opacity: 0.9;
-  }
-
-  .footer-icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .footer-label {
-    font-size: 13px;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
     font-weight: 700;
-    color: #fff;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
+    color: var(--blue);
+    margin-top: auto;
   }
 
-  .footer-value {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.6;
+  .card-action svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s;
   }
 
-  /* ============ Responsive ============ */
-  @media (max-width: 860px) {
-    .poster { margin: 0; border-radius: 0; }
-    .header { padding: 40px 28px 32px; }
-    .header-title { font-size: 32px; letter-spacing: 2px; }
-    .header-subtitle { font-size: 14px; letter-spacing: 2px; }
-    .section { padding: 0 28px; }
-    .features { grid-template-columns: repeat(2, 1fr); }
-    .feature:nth-child(2)::after { display: none; }
-    .feature { border-bottom: 1px solid var(--line); }
-    .feature:nth-last-child(-n+2) { border-bottom: none; }
-    .module-body {
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-    .module-icon { margin: 0 auto; }
-    .module-text { text-align: center; }
-    .module-hands { padding-left: 0; border-left: none; padding-top: 10px; border-top: 1px solid var(--line); }
-    .format-flow { grid-template-columns: 1fr; }
-    .format-arrow { transform: rotate(90deg); padding: 4px 0; }
-    .footer { padding: 24px 28px; grid-template-columns: repeat(2, 1fr); }
-    .cube-deco, .dots-deco { display: none; }
-    .part-heading { flex-wrap: wrap; }
-    .part-tagline { margin-left: 0; width: 100%; }
-    .promise-text { font-size: 16px; }
+  .card:hover .card-action svg {
+    transform: translateX(4px);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 32px 24px;
+    margin-top: auto;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .main-title { font-size: 32px; }
+    .grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
-<div class="poster">
+  <div class="container">
+    <header class="header">
+      <div class="eyebrow">DAOTAT</div>
+      <h1 class="main-title">臺灣數位資產暨<br>開放科技協會</h1>
+      <p class="subtitle">推動數位資產與開放科技的發展與落地，連結產業、政府與大眾，打造共榮生態圈。</p>
+    </header>
 
-  <!-- ================= Header ================= -->
-  <header class="header">
-    <div class="cube-deco"></div>
-    <div class="dots-deco"></div>
-
-    <div class="header-top">
-      <img class="logo" src="https://i.urusai.cc/yaku8.png" alt="區塊勢 Blocktrend">
-      <div class="header-title-wrap">
-        <h1 class="header-title">加密貨幣入門與動手實作</h1>
-        <div class="header-subtitle">臺灣數位資產暨開放科技協會・第一堂課</div>
-      </div>
-      <div style="width: 64px;"></div>
-    </div>
-
-    <div class="header-divider"></div>
-    <p class="header-tagline">聽過很多,但你真的<strong>做過</strong>嗎?三小時親手走一遍。</p>
-  </header>
-
-  <!-- ================= 課程特色 ================= -->
-  <section class="section">
-    <h2 class="section-heading">
-      <span class="icon-badge">★</span>
-      課程特色
-    </h2>
-
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">
-          <!-- hand / touch icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M24 32 V14 a4 4 0 0 1 8 0 V28"/>
-            <path d="M32 28 V10 a4 4 0 0 1 8 0 V28"/>
-            <path d="M40 28 V14 a4 4 0 0 1 8 0 V36"/>
-            <path d="M48 30 V22 a4 4 0 0 1 8 0 V42 a14 14 0 0 1 -14 14 H32 a8 8 0 0 1 -8 -8 V36 a4 4 0 0 0 -4 -4 a4 4 0 0 0 0 8 L28 48"/>
-          </svg>
-        </div>
-        <div class="feature-title">動手實作</div>
-        <div class="feature-desc">每一步跟著做<br>不留任何人掉隊</div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">
-          <!-- wallet icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <div class="grid">
+      <!-- 課程卡片 -->
+      <a href="./course/" class="card">
+        <div class="card-img-wrap course-img">
+          <!-- 課程 icon -->
+          <svg class="card-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="8" y="16" width="48" height="36" rx="3"/>
             <path d="M8 24 H44 a4 4 0 0 1 0 8 H8"/>
             <circle cx="48" cy="28" r="2" fill="currentColor" stroke="none"/>
             <path d="M14 16 L42 8 L46 16"/>
           </svg>
         </div>
-        <div class="feature-title">帶走錢包</div>
-        <div class="feature-desc">手機裡多一個<br>你真的會用的錢包</div>
-      </div>
+        <div class="card-content">
+          <span class="card-tag">課程活動</span>
+          <h2 class="card-title">加密貨幣入門與動手實作</h2>
+          <p class="card-desc">聽過很多，但你真的做過嗎？三小時親手走一遍。透過實作認識錢包支付與 DeFi 應用，零門檻無痛入門。</p>
+          <div class="card-action">
+            查看課程詳情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
 
-      <div class="feature">
-        <div class="feature-icon">
-          <!-- two modules / balance icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="14" width="22" height="22" rx="2"/>
-            <rect x="34" y="28" width="22" height="22" rx="2"/>
-            <line x1="19" y1="36" x2="19" y2="44"/>
-            <line x1="45" y1="20" x2="45" y2="28"/>
-            <path d="M19 44 H45"/>
+      <!-- 講者介紹卡片 -->
+      <a href="./speaker/" class="card">
+        <div class="card-img-wrap speaker-img">
+          <!-- 講者 icon -->
+          <svg class="card-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="32" cy="24" r="10"/>
+            <path d="M14 52 c0 -12 8 -20 18 -20 s18 8 18 20"/>
           </svg>
         </div>
-        <div class="feature-title">兩大主軸</div>
-        <div class="feature-desc">錢包支付與 DeFi<br>一堂課走完全貌</div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">
-          <!-- chat / no dumb question icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10 14 H54 V44 H30 L18 54 V44 H10 Z"/>
-            <circle cx="24" cy="28" r="1.5" fill="currentColor"/>
-            <circle cx="32" cy="28" r="1.5" fill="currentColor"/>
-            <circle cx="40" cy="28" r="1.5" fill="currentColor"/>
-          </svg>
+        <div class="card-content">
+          <span class="card-tag">講師陣容</span>
+          <h2 class="card-title">許明恩・講師介紹</h2>
+          <p class="card-desc">區塊勢創辦人、獨立內容創作者。用真實案例解讀區塊鏈產業，擁有超過八年的寫作與訪談經驗。</p>
+          <div class="card-action">
+            認識講師
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
         </div>
-        <div class="feature-title">零門檻提問</div>
-        <div class="feature-desc">隨時卡住隨時問<br>不懂不是你的錯</div>
-      </div>
+      </a>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= 課程內容 ================= -->
-  <section class="section modules">
-    <h2 class="section-heading">
-      <span class="icon-badge">📖</span>
-      課程內容
-    </h2>
-
-    <!-- ============ Part 1 ============ -->
-    <div class="part-heading">
-      <div class="part-label">Part 1</div>
-      <div class="part-title">錢包與支付應用</div>
-      <div class="part-tagline">從下載錢包開始,走到看得懂的支付世界</div>
-    </div>
-
-    <!-- 01 建立個人錢包 -->
-    <div class="module-row">
-      <div class="module-number">01</div>
-      <div class="module-body">
-        <div class="module-icon">
-          <!-- wallet icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="16" width="48" height="36" rx="3"/>
-            <path d="M8 24 H44 a4 4 0 0 1 0 8 H8"/>
-            <circle cx="48" cy="28" r="2" fill="currentColor" stroke="none"/>
-            <path d="M14 16 L42 8 L46 16"/>
-          </svg>
-        </div>
-        <div class="module-text">
-          <h3>建立個人錢包</h3>
-          <div class="module-sub">從零下載,學會備份與收款</div>
-          <div class="module-desc">錢包下載、建立流程、助記詞備份、取得個人收款地址</div>
-        </div>
-        <div class="module-hands">
-          <div class="module-hands-label">動手做</div>
-          <div class="module-hands-list">下載錢包 App、建立錢包、抄下助記詞、複製收款地址</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 鏈上金流觀察 -->
-    <div class="module-row">
-      <div class="module-number">02</div>
-      <div class="module-body">
-        <div class="module-icon">
-          <!-- block explorer icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="26" cy="26" r="14"/>
-            <line x1="36" y1="36" x2="52" y2="52"/>
-            <line x1="20" y1="26" x2="32" y2="26"/>
-            <line x1="26" y1="20" x2="26" y2="32"/>
-          </svg>
-        </div>
-        <div class="module-text">
-          <h3>鏈上金流觀察</h3>
-          <div class="module-sub">第一次看見「自己的」交易</div>
-          <div class="module-desc">現場領取加密貨幣、打開區塊鏈瀏覽器看懂一筆交易的所有欄位</div>
-        </div>
-        <div class="module-hands">
-          <div class="module-hands-label">動手做</div>
-          <div class="module-hands-list">現場領取加密貨幣、用區塊鏈瀏覽器查自己的交易</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 03 加密貨幣支付卡 -->
-    <div class="module-row">
-      <div class="module-number">03</div>
-      <div class="module-body">
-        <div class="module-icon">
-          <!-- credit card icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="6" y="14" width="52" height="36" rx="3"/>
-            <line x1="6" y1="24" x2="58" y2="24"/>
-            <rect x="12" y="34" width="10" height="6"/>
-          </svg>
-        </div>
-        <div class="module-text">
-          <h3>加密貨幣支付卡</h3>
-          <div class="module-sub">跟信用卡到底差在哪</div>
-          <div class="module-desc">錢放在哪裡、刷卡時扣款怎麼發生、跟傳統信用卡的關鍵差異</div>
-        </div>
-        <div class="module-hands">
-          <div class="module-hands-label">看懂它</div>
-          <div class="module-hands-list">拆解主流加密支付卡的運作流程與扣款邏輯</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============ Part 2 ============ -->
-    <div class="part-heading">
-      <div class="part-label">Part 2</div>
-      <div class="part-title">DeFi 鏈上金融應用</div>
-      <div class="part-tagline">不是投機,是用程式碼長出來的新金融服務</div>
-    </div>
-
-    <!-- 04 沒有銀行的儲蓄 -->
-    <div class="module-row">
-      <div class="module-number">04</div>
-      <div class="module-body">
-        <div class="module-icon">
-          <!-- bank / savings icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M32 8 L56 22 H8 Z"/>
-            <line x1="8" y1="28" x2="56" y2="28"/>
-            <line x1="14" y1="28" x2="14" y2="48"/>
-            <line x1="24" y1="28" x2="24" y2="48"/>
-            <line x1="40" y1="28" x2="40" y2="48"/>
-            <line x1="50" y1="28" x2="50" y2="48"/>
-            <line x1="6" y1="54" x2="58" y2="54"/>
-            <path d="M48 16 L50 14 L52 16" stroke-width="2"/>
-            <line x1="50" y1="14" x2="50" y2="10" stroke-width="2"/>
-          </svg>
-        </div>
-        <div class="module-text">
-          <h3>沒有銀行的儲蓄</h3>
-          <div class="module-sub">Aave 讓錢直接賺利息</div>
-          <div class="module-desc">沒有開戶、沒有額度、沒有櫃員——用程式碼做的存款服務</div>
-        </div>
-        <div class="module-hands">
-          <div class="module-hands-label">動手做</div>
-          <div class="module-hands-list">Aave:親手操作一次存款與查看利息</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 05 不會輸的樂透彩 -->
-    <div class="module-row">
-      <div class="module-number">05</div>
-      <div class="module-body">
-        <div class="module-icon">
-          <!-- ticket / lottery icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 20 H56 V28 A4 4 0 0 0 56 36 V44 H8 V36 A4 4 0 0 0 8 28 Z"/>
-            <line x1="24" y1="20" x2="24" y2="44" stroke-dasharray="3,3"/>
-            <circle cx="40" cy="32" r="5"/>
-            <path d="M40 28 V30 M40 34 V36 M37 32 H38 M42 32 H43"/>
-          </svg>
-        </div>
-        <div class="module-text">
-          <h3>不會輸的樂透彩</h3>
-          <div class="module-sub">PoolTogether 的 no-loss 機制</div>
-          <div class="module-desc">中獎拿獎金、沒中拿回本金——沒人賠的樂透怎麼做到的</div>
-        </div>
-        <div class="module-hands">
-          <div class="module-hands-label">動手做</div>
-          <div class="module-hands-list">PoolTogether:買一張無本金損失的彩券</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 06 鏈上自動兌幣機 -->
-    <div class="module-row">
-      <div class="module-number">06</div>
-      <div class="module-body">
-        <div class="module-icon">
-          <!-- swap / exchange icon -->
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="20" cy="20" r="10"/>
-            <circle cx="44" cy="44" r="10"/>
-            <path d="M30 16 H50 L46 12 M50 16 L46 20"/>
-            <path d="M34 48 H14 L18 44 M14 48 L18 52"/>
-          </svg>
-        </div>
-        <div class="module-text">
-          <h3>鏈上自動兌幣機</h3>
-          <div class="module-sub">Uniswap 沒有造市商的換幣</div>
-          <div class="module-desc">沒有買賣雙方、沒有訂單簿,換幣價格是怎麼算出來的</div>
-        </div>
-        <div class="module-hands">
-          <div class="module-hands-label">動手做</div>
-          <div class="module-hands-list">Uniswap:親手兌換一次加密貨幣</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 課程承諾 ================= -->
-  <section class="section">
-    <div class="promise">
-      <div class="promise-label">課 程 承 諾</div>
-      <div class="promise-text">三小時結束後,你的手機裡會多一個真的會用的錢包,以及「原來就是這樣」的踏實感。</div>
-    </div>
-  </section>
-
-  <!-- ================= 課程形式 ================= -->
-  <section class="section format">
-    <h2 class="section-heading">
-      <span class="icon-badge">🖥</span>
-      課程形式
-    </h2>
-
-    <div class="format-flow">
-      <div class="format-step">
-        <div class="format-icon">
-          <!-- phone icon -->
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="3" width="14" height="26" rx="2"/>
-            <line x1="14" y1="25" x2="18" y2="25"/>
-            <line x1="9" y1="8" x2="23" y2="8"/>
-          </svg>
-        </div>
-        <h4>自備手機</h4>
-        <p>iOS 或 Android 皆可,現場連 Wi-Fi</p>
-      </div>
-
-      <div class="format-arrow">›</div>
-
-      <div class="format-step">
-        <div class="format-icon">
-          <!-- step by step icon -->
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="4,24 12,16 18,20 28,8"/>
-            <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
-            <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
-            <circle cx="28" cy="8" r="1.5" fill="currentColor"/>
-          </svg>
-        </div>
-        <h4>一步一步走</h4>
-        <p>講師示範一步、學員跟一步,完成才前進</p>
-      </div>
-
-      <div class="format-arrow">›</div>
-
-      <div class="format-step">
-        <div class="format-icon">
-          <!-- question icon -->
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 8 H27 V22 H16 L10 27 V22 H5 Z"/>
-            <path d="M12 13 a4 4 0 0 1 8 0 c0 2 -4 2 -4 4" stroke-width="2"/>
-            <circle cx="16" cy="20" r="0.8" fill="currentColor"/>
-          </svg>
-        </div>
-        <h4>隨時可問</h4>
-        <p>中間隨時提問,確保沒有人卡關</p>
-      </div>
-
-      <div class="format-arrow">›</div>
-
-      <div class="format-step">
-        <div class="format-icon">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="16" cy="16" r="12"/>
-            <polyline points="16,8 16,16 22,20"/>
-          </svg>
-        </div>
-        <h4>三小時</h4>
-        <p>中場休息 15 分鐘,動手操作為主</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Footer ================= -->
   <footer class="footer">
-    <div class="footer-item">
-      <div class="footer-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 28 V12 L16 4 L28 12 V28 Z"/>
-          <rect x="10" y="18" width="4" height="10"/>
-          <rect x="18" y="18" width="4" height="6"/>
-        </svg>
-      </div>
-      <div>
-        <div class="footer-label">主辦</div>
-        <div class="footer-value">臺灣數位資產暨<br>開放科技協會</div>
-      </div>
-    </div>
-
-    <div class="footer-item">
-      <div class="footer-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M16 3 L28 10 V22 L16 29 L4 22 V10 Z"/>
-          <path d="M4 10 L16 17 L28 10 M16 17 V29"/>
-        </svg>
-      </div>
-      <div>
-        <div class="footer-label">課程名稱</div>
-        <div class="footer-value">加密貨幣入門<br>與動手實作</div>
-      </div>
-    </div>
-
-    <div class="footer-item">
-      <div class="footer-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="16" cy="16" r="12"/>
-          <polyline points="16,8 16,16 22,20"/>
-        </svg>
-      </div>
-      <div>
-        <div class="footer-label">規模</div>
-        <div class="footer-value">3 小時<br><span style="opacity:0.7;">(一季一場,系列第一堂)</span></div>
-      </div>
-    </div>
-
-    <div class="footer-item">
-      <div class="footer-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="6"/>
-          <path d="M3 27 a8 8 0 0 1 16 0"/>
-          <path d="M20 8 h8 M20 14 h8 M20 20 h8"/>
-        </svg>
-      </div>
-      <div>
-        <div class="footer-label">講師</div>
-        <div class="footer-value">許明恩<br><span style="opacity:0.7;">(區塊勢 Blocktrend)</span></div>
-      </div>
-    </div>
+    © 2026 臺灣數位資產暨開放科技協會 (DAOTAT). All rights reserved.
   </footer>
-
-</div>
 
 </body>
 </html>
